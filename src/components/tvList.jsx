@@ -73,12 +73,12 @@ function TvList() {
   return (
     <>
       <div className="flex">
-        <div className="flex w-[20%]">
+        <div className="flex w-[40%] lg:w-[20%]">
           <div className="flex flex-wrap bg-gray h-[100vh] overflow-auto items-center justify-center">
-            <div className="categories flex bg-gray justify-around sticky top-0 z-10 overflow-y-scroll">
+            <div className="categories flex backdrop-blur-sm justify-around sticky top-0 z-10 overflow-y-scroll">
               {categories.map((category, index) => (
                 <button
-                  className="p-2 bg-white rounded-xl m-4 ml-0 "
+                  className="p-2 bg-white rounded-xl m-2 "
                   key={index}
                   onClick={() => handleCategorySelect(category)}
                 >
@@ -114,7 +114,7 @@ function TvList() {
             ))}
           </div>
         </div>
-        <div className="flex h-[100vh] w-[80%]">
+        <div className="flex h-[100vh] w-[60%] lg:w-[80%]">
           <TheosPlayer
             height={"100vh"}
             width="100%"
