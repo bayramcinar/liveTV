@@ -1,14 +1,14 @@
 import React from "react";
 import logo from "../images/logo.jpg";
 
-function TvBox({ name, onSelect }) {
+function TvBox({ name, onSelect, icon }) {
   return (
     <>
       <div className="bg-white w-72 h-12 rounded-xl shadow-lg m-5 flex">
         <div className="m-2 w-full flex justify-around">
           <div className="imgArea w-1/5">
             <img
-              src={logo}
+              src={icon}
               alt={name}
               className="flex items-center justify-center h-full object-contain w-full"
             />
