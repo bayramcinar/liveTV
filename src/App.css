@@ -2,7 +2,7 @@
   font-family: "Roboto", sans-serif;
 }
 .player-container {
-  height: 100vh !important;
+  height: 90vh !important;
 }
 .player-container > video {
   width: 100%;

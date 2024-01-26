@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import TvBox from "./tvBox";
-import m3u from "./new.m3u";
+import m3u from "../m3uFile/new.m3u";
 import { TheosPlayer } from "@aka_theos/react-hls-player";
 import belgesel from "../images/belgesel.png";
 import haber from "../images/haber.png";
 import spor from "../images/spor.png";
 import müzik from "../images/müzik.png";
 import ulusal from "../images/ulusal.png";
+import Footer from "./footer";
+import Navbar from "./navbar";
 
 function TvList() {
   const [originalChannels, setOriginalChannels] = useState([]);
@@ -72,9 +74,10 @@ function TvList() {
 
   return (
     <>
+      <Navbar />
       <div className="flex">
         <div className="flex w-[40%] lg:w-[20%]">
-          <div className="flex flex-wrap bg-gray h-[100vh] overflow-auto items-center justify-center">
+          <div className="flex flex-wrap bg-gray h-[90vh] overflow-auto items-center justify-center">
             <div className="categories flex backdrop-blur-sm justify-around sticky top-0 z-10 overflow-y-scroll">
               {categories.map((category, index) => (
                 <button
@@ -114,7 +117,7 @@ function TvList() {
             ))}
           </div>
         </div>
-        <div className="flex h-[100vh] w-[60%] lg:w-[80%]">
+        <div className="flex h-[90vh] w-[60%] lg:w-[80%]">
           <TheosPlayer
             height={"100vh"}
             width="100%"
@@ -128,6 +131,7 @@ function TvList() {
           />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
