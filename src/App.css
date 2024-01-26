@@ -1,0 +1,22 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.player-container {
+  height: 100vh !important;
+}
+.player-container > video {
+  width: 100%;
+  object-fit: contain !important;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
