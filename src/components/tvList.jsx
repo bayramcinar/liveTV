@@ -3,8 +3,14 @@ import axios from "axios";
 import TvBox from "./tvBox";
 import m3u from "./new.m3u";
 import { TheosPlayer } from "@aka_theos/react-hls-player";
+import belgesel from "../images/belgesel.png";
+import haber from "../images/haber.png";
+import spor from "../images/spor.png";
+import müzik from "../images/müzik.png";
+import ulusal from "../images/ulusal.png";
 
 function TvList() {
+  const [originalChannels, setOriginalChannels] = useState([]);
   const [tvChannels, setTvChannels] = useState([]);
   const [selectedChannel, setSelectedChannel] = useState({});
   const [categories, setCategories] = useState([]);
@@ -15,6 +21,7 @@ function TvList() {
         const response = await axios.get(m3u);
         const { channels, categories } = parseM3UContent(response.data);
         setTvChannels(channels);
+        setOriginalChannels(channels);
         setCategories(categories);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -57,7 +64,7 @@ function TvList() {
   };
 
   const handleCategorySelect = (category) => {
-    const filteredChannels = tvChannels.filter(
+    const filteredChannels = originalChannels.filter(
       (channel) => channel.category === category
     );
     setTvChannels(filteredChannels);
@@ -66,23 +73,36 @@ function TvList() {
   return (
     <>
       <div className="flex">
-        <div className="categories flex flex-col bg-gray justify-around">
-          {categories.map((category, index) => (
-            <button
-              className="p-2 bg-white rounded-r-xl m-2 ml-0"
-              key={index}
-              onClick={() => handleCategorySelect(category)}
-            >
-              {category.split("").map((letter, i) => (
-                <div className="flex flex-col font-semibold">
-                  <span>{letter}</span>
-                </div>
-              ))}
-            </button>
-          ))}
-        </div>
-        <div className="flex w-1/4">
+        <div className="flex w-[20%]">
           <div className="flex flex-wrap bg-gray h-[100vh] overflow-auto items-center justify-center">
+            <div className="categories flex bg-gray justify-around sticky top-0 z-10 overflow-y-scroll">
+              {categories.map((category, index) => (
+                <button
+                  className="p-2 bg-white rounded-xl m-4 ml-0 "
+                  key={index}
+                  onClick={() => handleCategorySelect(category)}
+                >
+                  <div className="flex flex-col items-center justify-center">
+                    {category === "BELGESEL" && (
+                      <img src={belgesel} className="w-8" alt={category} />
+                    )}
+                    {category === "HABER" && (
+                      <img src={haber} className="w-8" alt={category} />
+                    )}
+                    {category === "SPOR" && (
+                      <img src={spor} className="w-8" alt={category} />
+                    )}
+                    {category === "MUZIK" && (
+                      <img src={müzik} className="w-8" alt={category} />
+                    )}
+                    {category === "ULUSAL" && (
+                      <img src={ulusal} className="w-8" alt={category} />
+                    )}
+                    <h1 className="text-xs mt-2 font-semibold">{category}</h1>
+                  </div>
+                </button>
+              ))}
+            </div>
             {tvChannels.map((channel, index) => (
               <TvBox
                 key={index}
@@ -94,7 +114,7 @@ function TvList() {
             ))}
           </div>
         </div>
-        <div className="flex h-[100vh] w-3/4">
+        <div className="flex h-[100vh] w-[80%]">
           <TheosPlayer
             height={"100vh"}
             width="100%"
