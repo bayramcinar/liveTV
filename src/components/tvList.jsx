@@ -16,7 +16,6 @@ function TvList() {
   const [tvChannels, setTvChannels] = useState([]);
   const [selectedChannel, setSelectedChannel] = useState({});
   const [categories, setCategories] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -74,64 +73,66 @@ function TvList() {
 
   return (
     <>
-      <Navbar />
-      <div className="flex">
-        <div className="flex w-[40%] lg:w-[20%]">
-          <div className="flex flex-wrap bg-gray h-[90vh] overflow-auto items-center justify-center">
-            <div className="categories flex backdrop-blur-sm justify-around sticky top-0 z-10 overflow-y-scroll">
-              {categories.map((category, index) => (
-                <button
-                  className="p-2 bg-white rounded-xl m-2 "
+      <div className="h-[100vh]">
+        <Navbar />
+        <div className="flex">
+          <div className="flex w-[40%] lg:w-[20%]">
+            <div className="flex flex-wrap bg-gray max-h-[90vh] h-[100%] overflow-auto items-center justify-center">
+              <div className="categories flex backdrop-blur-sm sticky top-0 z-10 overflow-y-scroll">
+                {categories.map((category, index) => (
+                  <button
+                    className="p-2 bg-white rounded-xl m-2 "
+                    key={index}
+                    onClick={() => handleCategorySelect(category)}
+                  >
+                    <div className="flex flex-col items-center justify-around">
+                      {category === "BELGESEL" && (
+                        <img src={belgesel} className="w-8" alt={category} />
+                      )}
+                      {category === "HABER" && (
+                        <img src={haber} className="w-8" alt={category} />
+                      )}
+                      {category === "SPOR" && (
+                        <img src={spor} className="w-8" alt={category} />
+                      )}
+                      {category === "MUZIK" && (
+                        <img src={müzik} className="w-8" alt={category} />
+                      )}
+                      {category === "ULUSAL" && (
+                        <img src={ulusal} className="w-8" alt={category} />
+                      )}
+                      <h1 className="text-xs mt-2 font-semibold">{category}</h1>
+                    </div>
+                  </button>
+                ))}
+              </div>
+              {tvChannels.map((channel, index) => (
+                <TvBox
                   key={index}
-                  onClick={() => handleCategorySelect(category)}
-                >
-                  <div className="flex flex-col items-center justify-center">
-                    {category === "BELGESEL" && (
-                      <img src={belgesel} className="w-8" alt={category} />
-                    )}
-                    {category === "HABER" && (
-                      <img src={haber} className="w-8" alt={category} />
-                    )}
-                    {category === "SPOR" && (
-                      <img src={spor} className="w-8" alt={category} />
-                    )}
-                    {category === "MUZIK" && (
-                      <img src={müzik} className="w-8" alt={category} />
-                    )}
-                    {category === "ULUSAL" && (
-                      <img src={ulusal} className="w-8" alt={category} />
-                    )}
-                    <h1 className="text-xs mt-2 font-semibold">{category}</h1>
-                  </div>
-                </button>
+                  name={channel.name}
+                  icon={channel.logo}
+                  src={channel.streamUrl}
+                  onSelect={() => handleChannelSelect(channel)}
+                />
               ))}
             </div>
-            {tvChannels.map((channel, index) => (
-              <TvBox
-                key={index}
-                name={channel.name}
-                icon={channel.logo}
-                src={channel.streamUrl}
-                onSelect={() => handleChannelSelect(channel)}
-              />
-            ))}
+          </div>
+          <div className="flex h-[100%] w-[60%] lg:w-[80%]">
+            <TheosPlayer
+              height={"100%"}
+              width="100%"
+              autoPlay={true}
+              src={
+                selectedChannel.streamUrl
+                  ? selectedChannel.streamUrl
+                  : "https://tv8-live.daioncdn.net/tv8/tv8.m3u8"
+              }
+              title={selectedChannel.name ? selectedChannel.name : "TV8"}
+            />
           </div>
         </div>
-        <div className="flex h-[90vh] w-[60%] lg:w-[80%]">
-          <TheosPlayer
-            height={"100vh"}
-            width="100%"
-            autoPlay={true}
-            src={
-              selectedChannel.streamUrl
-                ? selectedChannel.streamUrl
-                : "https://tv8-live.daioncdn.net/tv8/tv8.m3u8"
-            }
-            title={selectedChannel.name ? selectedChannel.name : "TV8"}
-          />
-        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

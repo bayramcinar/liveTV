@@ -13,7 +13,9 @@ function TvBox({ name, onSelect, icon }) {
             />
           </div>
           <div className="flex w-4/5 items-center">
-            <h1 className="text-sm font-semibold w-3/4 ml-8">{name}</h1>
+            <h1 className="text-xs lg:text-sm  font-semibold w-3/4 ml-8">
+              {name}
+            </h1>
             <div onClick={() => onSelect()} className="w-1/4 ">
               <i className="fa-solid fa-circle-play transition-transform transform hover:scale-125"></i>
             </div>
