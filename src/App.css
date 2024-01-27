@@ -12,23 +12,38 @@
   width: 6px;
 }
 
-::-webkit-scrollbar-thumb {
+.light-mode ::-webkit-scrollbar-thumb {
   background-color: #d1d5db;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-track {
+.light-mode ::-webkit-scrollbar-track {
   background-color: #f3f4f6;
 }
-::-webkit-scrollbar-horizontal {
-  height: 6px;
-}
 
-::-webkit-scrollbar-thumb:horizontal {
+.light-mode ::-webkit-scrollbar-thumb:horizontal {
   background-color: #d1d5db;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-track:horizontal {
+.light-mode ::-webkit-scrollbar-track:horizontal {
   background-color: #f3f4f6;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #555b5f;
+  border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background-color: #1e2022;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:horizontal {
+  background-color: #555b5f;
+  border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-track:horizontal {
+  background-color: #1e2022;
 }

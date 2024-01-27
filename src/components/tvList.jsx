@@ -32,6 +32,12 @@ function TvList() {
     fetchData();
   }, []);
 
+  const [isLightMode, setLightMode] = useState(true);
+
+  const handleToggle = () => {
+    setLightMode((prevMode) => !prevMode);
+  };
+
   const parseM3UContent = (m3uContent) => {
     const channels = [];
     const categories = new Set();
@@ -74,14 +80,26 @@ function TvList() {
   return (
     <>
       <div className="h-[100vh]">
-        <Navbar />
+        <Navbar handleToggle={handleToggle} isLightMode={isLightMode} />
         <div className="flex">
-          <div className="flex w-[40%] lg:w-[20%]">
-            <div className="flex flex-wrap bg-gray max-h-[90vh] h-[100%] overflow-auto items-center justify-center">
+          <div
+            className={`flex w-[40%] lg:w-[20%] ${
+              isLightMode ? "light-mode" : "dark-mode"
+            }`}
+          >
+            <div
+              className={`flex flex-wrap  ${
+                isLightMode ? "bg-gray" : "bg-darkBg"
+              }  max-h-[90vh] h-[100%] overflow-auto items-center justify-center `}
+            >
               <div className="categories flex backdrop-blur-sm sticky top-0 z-10 overflow-y-scroll">
                 {categories.map((category, index) => (
                   <button
-                    className="p-2 bg-white rounded-xl m-2 "
+                    className={`p-2 ${
+                      isLightMode
+                        ? "bg-white text-black"
+                        : "bg-darkBox text-white "
+                    } rounded-xl m-2`}
                     key={index}
                     onClick={() => handleCategorySelect(category)}
                   >
@@ -108,6 +126,7 @@ function TvList() {
               </div>
               {tvChannels.map((channel, index) => (
                 <TvBox
+                  isLightMode={isLightMode}
                   key={index}
                   name={channel.name}
                   icon={channel.logo}
@@ -131,7 +150,7 @@ function TvList() {
             />
           </div>
         </div>
-        <Footer />
+        <Footer isLightMode={isLightMode} />
       </div>
     </>
   );

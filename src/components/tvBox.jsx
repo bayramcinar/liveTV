@@ -1,9 +1,13 @@
 import React from "react";
 
-function TvBox({ name, onSelect, icon }) {
+function TvBox({ name, onSelect, icon, isLightMode }) {
   return (
     <>
-      <div className="bg-white w-72 h-12 rounded-xl shadow-lg m-5 flex">
+      <div
+        className={` ${
+          isLightMode ? "bg-white" : "bg-darkBox"
+        } w-72 h-12 rounded-xl shadow-lg m-5 flex`}
+      >
         <div className="m-2 w-full flex">
           <div className="imgArea w-1/5">
             <img
@@ -12,7 +16,11 @@ function TvBox({ name, onSelect, icon }) {
               className="flex items-center justify-center h-full object-contain w-full"
             />
           </div>
-          <div className="flex w-4/5 items-center">
+          <div
+            className={`flex w-4/5 items-center ${
+              isLightMode ? "text-black" : "text-white"
+            }`}
+          >
             <h1 className="text-xs lg:text-sm  font-semibold w-3/4 ml-8">
               {name}
             </h1>
