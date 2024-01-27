@@ -90,7 +90,7 @@ function TvList() {
             <div
               className={`flex flex-wrap  ${
                 isLightMode ? "bg-gray" : "bg-darkBg"
-              }  max-h-[90vh] h-[100%] overflow-auto items-center justify-center `}
+              }  max-h-[90vh] h-[100%]  overflow-auto items-center justify-center `}
             >
               <div className="categories flex backdrop-blur-sm sticky top-0 z-10 overflow-y-scroll">
                 {categories.map((category, index) => (
@@ -136,7 +136,11 @@ function TvList() {
               ))}
             </div>
           </div>
-          <div className="flex h-[100%] w-[60%] lg:w-[80%]">
+          <div
+            className={`flex h-[100%] w-[60%] lg:w-[80%] ${
+              isLightMode ? "light-mode" : "dark-mode"
+            }`}
+          >
             <TheosPlayer
               height={"100%"}
               width="100%"

@@ -11,7 +11,12 @@
 ::-webkit-scrollbar {
   width: 6px;
 }
-
+.dark-mode .player-container {
+  background-color: #1e2022 !important;
+}
+.light-mode .player-container {
+  background-color: #eeeded !important;
+}
 .light-mode ::-webkit-scrollbar-thumb {
   background-color: #d1d5db;
   border-radius: 4px;
