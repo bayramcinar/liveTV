@@ -82,6 +82,15 @@ function TvList() {
     <>
       <div className="h-[100vh]">
         <Navbar handleToggle={handleToggle} isLightMode={isLightMode} />
+        <div className="reklamBanner w-full h-auto">
+          <Adsense
+            client="ca-pub-9149024490109255"
+            slot="8881854965"
+            style={{ display: "block" }}
+            layout="in-article"
+            format="fluid"
+          />
+        </div>
         <div className="block md:flex">
           <div
             className={`flex w-[100%] md:w-[20%] ${
