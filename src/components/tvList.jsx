@@ -80,7 +80,7 @@ function TvList() {
 
   return (
     <>
-      <div className="h-[100vh] relative">
+      <div className="h-[100vh]">
         <Navbar handleToggle={handleToggle} isLightMode={isLightMode} />
         <div className="block md:flex">
           <div
@@ -155,7 +155,7 @@ function TvList() {
             />
           </div>
         </div>
-        <div className="reklamBanner w-full h-auto absolute bottom-0">
+        <div className="reklamBanner w-full h-auto">
           <Add />
         </div>
         <Footer isLightMode={isLightMode} />
