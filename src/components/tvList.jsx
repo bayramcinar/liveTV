@@ -82,7 +82,7 @@ function TvList() {
     <>
       <div className="h-[100vh]">
         <Navbar handleToggle={handleToggle} isLightMode={isLightMode} />
-        <div className="reklamBanner w-full h-auto">
+        <div className="reklamBanner">
           <Adsense
             client="ca-pub-9149024490109255"
             slot="8881854965"
@@ -164,7 +164,7 @@ function TvList() {
             />
           </div>
         </div>
-        <div className="reklamBanner w-full h-auto">
+        <div className="reklamBanner">
           <Adsense
             client="ca-pub-9149024490109255"
             slot="8881854965"
