@@ -10,7 +10,7 @@ import müzik from "../images/müzik.png";
 import ulusal from "../images/ulusal.png";
 import Footer from "./footer";
 import Navbar from "./navbar";
-import Add from "./add";
+import { Adsense } from "@ctrl/react-adsense";
 
 function TvList() {
   const [originalChannels, setOriginalChannels] = useState([]);
@@ -156,7 +156,13 @@ function TvList() {
           </div>
         </div>
         <div className="reklamBanner w-full h-auto">
-          <Add />
+          <Adsense
+            client="ca-pub-9149024490109255"
+            slot="8881854965"
+            style={{ display: "block" }}
+            layout="in-article"
+            format="fluid"
+          />
         </div>
         <Footer isLightMode={isLightMode} />
       </div>
