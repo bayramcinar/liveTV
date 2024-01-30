@@ -1,9 +1,7 @@
 * {
   font-family: "Roboto", sans-serif;
 }
-.player-container {
-  height: 90vh !important;
-}
+
 .player-container > video {
   width: 100%;
   object-fit: contain !important;
@@ -51,4 +49,12 @@
 
 .dark-mode ::-webkit-scrollbar-track:horizontal {
   background-color: #1e2022;
+}
+.player-container {
+  height: 31vh !important;
+}
+@media (min-width: 768px) {
+  .player-container {
+    height: 90vh !important;
+  }
 }

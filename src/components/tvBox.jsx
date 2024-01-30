@@ -6,7 +6,7 @@ function TvBox({ name, onSelect, icon, isLightMode }) {
       <div
         className={` ${
           isLightMode ? "bg-white" : "bg-darkBox"
-        } w-72 h-12 rounded-xl shadow-lg m-5 flex`}
+        } w-32 md:w-72 h-12 rounded-xl shadow-lg m-5 flex`}
       >
         <div className="m-2 w-full flex">
           <div className="imgArea w-1/5">
@@ -21,7 +21,7 @@ function TvBox({ name, onSelect, icon, isLightMode }) {
               isLightMode ? "text-black" : "text-white"
             }`}
           >
-            <h1 className="text-xs lg:text-sm  font-semibold w-3/4 ml-8">
+            <h1 className="text-xs lg:text-sm  font-semibold w-3/4 ml-2 lg:ml-8">
               {name}
             </h1>
             <div onClick={() => onSelect()} className="w-1/4 ">

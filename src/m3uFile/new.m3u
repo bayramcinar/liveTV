@@ -3,7 +3,7 @@ https://d1u68oyra9spme.cloudfront.net/master_4.m3u8
 #EXTINF:-1 tvg-name="KANAL D" tvg-id="KanalD.tr" tvg-logo="https://i.ibb.co/hf2mSz5/kanal-d.png" group-title="ULUSAL",KANAL D
 https://demiroren-live.daioncdn.net/kanald/kanald_1080p.m3u8?app=kanald_web&ce=3
 #EXTINF:-1 tvg-name="ATV" tvg-id="ATV.tr" tvg-logo="https://i.ibb.co/DwFJ0vn/atv.png" group-title="ULUSAL",ATV
-https://trkvz.daioncdn.net/atv/atv_1080p.m3u8?e=1670362893&st=JwQZXjiQ-CIl-KlQeYKm3Q&sid=4yg5ay3f73oc&app=d1ce2d40-5256-4550-b02e-e73c185a314e&ce=3
+https://ecanlitv3.etvserver.com/atv.m3u8?tkn=3-OFE6n073m2IVLQAE6bsQ&tms=1706610519
 #EXTINF:-1 tvg-name="STAR TV" tvg-id="StarTV.tr" tvg-logo="https://i.ibb.co/hY3Z8zx/star-tv.png" group-title="ULUSAL",STAR TV
 https://dogus-live.daioncdn.net/startv/startv_720p.m3u8
 #EXTINF:-1 tvg-name="SHOW TV" tvg-id="ShowTV.tr" tvg-logo="https://i.ibb.co/Rv0rWhZ/show.png" group-title="ULUSAL",SHOW TV
@@ -66,20 +66,18 @@ https://live.artidijitalmedya.com/artidijital_lifetv/lifetv/playlist.m3u8
 https://streaming.netdirekt.com.tr/35757/teleontv/teleontv_lisansli_canliyayin_hd_live/playlist.m3u8
 #EXTINF:-1 tvg-name="TRT SPOR" tvg-id="TRTSpor.tr" tvg-logo="https://i.ibb.co/WxD4PLG/trt-spor.png" group-title="SPOR",TRT SPOR
 https://tv-trtspor1.medya.trt.com.tr/master_720.m3u8
-#EXTINF:-1 tvg-name="TRT SPOR" tvg-id="TRTSpor.tr" tvg-logo="https://i.ibb.co/GFP51yN/trt-3-spor.png" group-title="SPOR",TRT SPOR
-https://bozztv.com/inim03/live1/trtspor3/playlist.m3u8
 #EXTINF:-1 tvg-name="beIN SPORTS HABER" tvg-id="beINSportsHaber.tr" tvg-id="beIN SPORTS HABER" tvg-logo="https://i.ibb.co/GdkQ5mY/bein-sports-haber.png" group-title="SPOR",beIN SPORTS HABER
 https://raw.githubusercontent.com/rideordie16/YouTube/main/spor/beinsportshaber.m3u8
 #EXTINF:-1 tvg-name="TV 8.5" tvg-id="TV85.tr" tvg-logo="https://i.ibb.co/6PRYHdW/tv85.png" group-title="SPOR",TV 8.5
 http://50.7.218.122:8080/tv85/index.m3u8
 #EXTINF:-1 tvg-name="A SPOR" tvg-id="ASpor.tr" tvg-logo="https://i.ibb.co/rwnrgFV/a-spor.png" group-title="SPOR",A SPOR
-https://bozztv.com/inim03/live1/aspor/playlist.m3u8
+https://www.youtube.com/live/RTfe-8VY9hU?si=Pg6JzU3CQ5v3bg5o
 #EXTINF:-1 tvg-name="TRT SPOR YILDIZ" tvg-id="TRTSporYildiz.tr" tvg-logo="https://i.ibb.co/YRgKcDn/trt-spor-yildiz.png" group-title="SPOR",TRT SPOR YILDIZ
 https://tv-trtspor2.medya.trt.com.tr/master_720.m3u8
 #EXTINF:-1 tvg-name="SPORTS TV" tvg-id="SportsTV.tr" tvg-logo="https://i.ibb.co/R3q43dk/sportstv.png" group-title="SPOR",SPORTS TV
 https://sportstv.blutv.com/blutv_sportstv2/live_720p2000000kbps/index.m3u8
 #EXTINF:-1 tvg-name="FB TV" tvg-id="FBTV.tr" tvg-logo="https://i.ibb.co/315SYpK/fb-tv.png" group-title="SPOR",FB TV
-https://trn10.tulix.tv/gt-fbtv/index.m3u8
+https://ecanlitv3.etvserver.com/fbtv.m3u8?tkn=egxQmrHZ6IFYLPvPjGVrGg&tms=1706610451
 #EXTINF:-1 tvg-name="GS TV HD" tvg-id="GSTV.tr" tvg-logo="https://i.ibb.co/6RqMpGT/gs-tv.png" group-title="SPOR",GS TV HD
 https://owifavo5.rocketcdn.com/gstv/gstv.smil/chunklist_b1828000_sltur.m3u8
 #EXTINF:-1 tvg-name="TJK TV" tvg-id="TJKTV.tr" tvg-logo="https://i.ibb.co/PrkXrRn/tjk-tv.png" group-title="SPOR",TJK TV

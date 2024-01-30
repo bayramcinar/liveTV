@@ -81,18 +81,18 @@ function TvList() {
     <>
       <div className="h-[100vh]">
         <Navbar handleToggle={handleToggle} isLightMode={isLightMode} />
-        <div className="flex">
+        <div className="block md:flex">
           <div
-            className={`flex w-[40%] lg:w-[20%] ${
+            className={`flex w-[100%] md:w-[20%] ${
               isLightMode ? "light-mode" : "dark-mode"
             }`}
           >
             <div
               className={`flex flex-wrap  ${
                 isLightMode ? "bg-gray" : "bg-darkBg"
-              }  max-h-[90vh] h-[100%]  overflow-auto items-center justify-center `}
+              } max-h-[56vh] md:max-h-[90vh] h-[100%]  overflow-auto items-center justify-center `}
             >
-              <div className="categories flex backdrop-blur-sm sticky top-0 z-10 overflow-y-scroll">
+              <div className="categories flex max-[768px]:w-full max-[768px]:items-center max-[768px]:justify-center backdrop-blur-sm sticky top-0 z-10 overflow-y-scroll">
                 {categories.map((category, index) => (
                   <button
                     className={`p-2 ${
@@ -137,7 +137,7 @@ function TvList() {
             </div>
           </div>
           <div
-            className={`flex h-[100%] w-[60%] lg:w-[80%] ${
+            className={`flex h-[100%] w-[100%] md:w-[80%] ${
               isLightMode ? "light-mode" : "dark-mode"
             }`}
           >
