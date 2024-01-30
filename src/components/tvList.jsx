@@ -10,6 +10,7 @@ import müzik from "../images/müzik.png";
 import ulusal from "../images/ulusal.png";
 import Footer from "./footer";
 import Navbar from "./navbar";
+import Add from "./add";
 
 function TvList() {
   const [originalChannels, setOriginalChannels] = useState([]);
@@ -155,20 +156,7 @@ function TvList() {
           </div>
         </div>
         <div className="reklamBanner w-full h-auto absolute bottom-0">
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9149024490109255"
-            crossorigin="anonymous"
-          ></script>
-          <ins
-            class="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client="ca-pub-9149024490109255"
-            data-ad-slot="8881854965"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          <Add />
         </div>
         <Footer isLightMode={isLightMode} />
       </div>
