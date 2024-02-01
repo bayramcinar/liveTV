@@ -159,7 +159,7 @@ function TvList() {
           </div>
         </div>
         <div className="reklamBanner">
-          <Adsense client="ca-pub-9149024490109255" slot="4917315956" />
+          <Adsense client="ca-pub-9149024490109255" slot="6016754020" />
         </div>
         <Footer isLightMode={isLightMode} />
       </div>
