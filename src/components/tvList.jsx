@@ -85,7 +85,7 @@ function TvList() {
         <div className="reklamBanner">
           <Adsense
             client="ca-pub-9149024490109255"
-            slot="8881854965"
+            slot="4917315956"
             style={{ display: "block" }}
             layout="in-article"
             format="fluid"
@@ -167,7 +167,7 @@ function TvList() {
         <div className="reklamBanner">
           <Adsense
             client="ca-pub-9149024490109255"
-            slot="8881854965"
+            slot="4917315956"
             style={{ display: "block" }}
             layout="in-article"
             format="fluid"
