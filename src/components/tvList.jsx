@@ -83,13 +83,7 @@ function TvList() {
       <div className="h-[100vh]">
         <Navbar handleToggle={handleToggle} isLightMode={isLightMode} />
         <div className="reklamBanner">
-          <Adsense
-            client="ca-pub-9149024490109255"
-            slot="4917315956"
-            style={{ display: "block" }}
-            layout="in-article"
-            format="fluid"
-          />
+          <Adsense client="ca-pub-9149024490109255" slot="4917315956" />
         </div>
         <div className="block md:flex">
           <div
@@ -165,13 +159,7 @@ function TvList() {
           </div>
         </div>
         <div className="reklamBanner">
-          <Adsense
-            client="ca-pub-9149024490109255"
-            slot="4917315956"
-            style={{ display: "block" }}
-            layout="in-article"
-            format="fluid"
-          />
+          <Adsense client="ca-pub-9149024490109255" slot="4917315956" />
         </div>
         <Footer isLightMode={isLightMode} />
       </div>
