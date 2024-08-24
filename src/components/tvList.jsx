@@ -82,9 +82,7 @@ function TvList() {
     <>
       <div className="h-[100vh]">
         <Navbar handleToggle={handleToggle} isLightMode={isLightMode} />
-        <div className="reklamBanner">
-          <Adsense client="ca-pub-9149024490109255" slot="4917315956" />
-        </div>
+
         <div className="block md:flex">
           <div
             className={`flex w-[100%] md:w-[20%] ${
@@ -158,9 +156,7 @@ function TvList() {
             />
           </div>
         </div>
-        <div className="reklamBanner">
-          <Adsense client="ca-pub-9149024490109255" slot="6016754020" />
-        </div>
+
         <Footer isLightMode={isLightMode} />
       </div>
     </>
